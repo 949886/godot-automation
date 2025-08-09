@@ -20,4 +20,5 @@ jobs:
     name: Release
     needs: build
     uses: ./.github/workflows/release.yml
+    if: github.event_name != 'pull_request'
     secrets: inherit
